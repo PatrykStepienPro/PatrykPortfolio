@@ -9,7 +9,7 @@ public class LanguageService
     private readonly IJSRuntime _js;
     private Dictionary<string, string> _strings = new();
 
-    public Lang Current { get; private set; } = Lang.En;
+    public Lang Current { get; private set; } = Lang.Pl;
     public bool IsLoaded { get; private set; }
     public event Action? OnChange;
 
