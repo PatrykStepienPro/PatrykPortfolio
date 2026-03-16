@@ -1,16 +1,17 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu/>
+@inherits LayoutComponentBase
+
+<header class="site-header">
+    <NavMenu />
+</header>
+
+<main>
+    @Body
+</main>
+
+<footer class="site-footer">
+    <div class="container text-center">
+        <p class="mb-0">
+            &copy; @DateTime.Now.Year Patryk Stępień &mdash; Built with Blazor WASM &amp; .NET
+        </p>
     </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+</footer>

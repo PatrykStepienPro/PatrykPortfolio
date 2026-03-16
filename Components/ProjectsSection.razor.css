@@ -1,0 +1,68 @@
+.project-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-icon {
+    color: var(--color-accent);
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.project-link {
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease;
+    display: inline-flex;
+}
+
+.project-link:hover {
+    color: var(--color-accent);
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-tag {
+    background-color: rgba(88, 166, 255, 0.1);
+    color: var(--color-accent);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}

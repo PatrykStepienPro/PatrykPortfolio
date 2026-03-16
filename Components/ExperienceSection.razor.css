@@ -1,0 +1,93 @@
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -1.71rem;
+    top: 1.25rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-bg-primary);
+    z-index: 1;
+}
+
+.timeline-content {
+    padding: 1.5rem;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-role {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem;
+    color: var(--color-text-primary);
+}
+
+.timeline-company {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.timeline-period {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    margin-top: 0.2rem;
+}
+
+.timeline-bullets {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+/* reuse project-tag from ProjectsSection — scoped CSS won't bleed, so define here too */
+.project-tag {
+    background-color: rgba(88, 166, 255, 0.1);
+    color: var(--color-accent);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}

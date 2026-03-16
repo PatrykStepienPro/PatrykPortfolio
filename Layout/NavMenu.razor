@@ -1,40 +1,57 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">PatrykPortfolio</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+@inject IJSRuntime JS
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
+<nav class="nav-container container-fluid">
+    <a class="nav-brand" href="#hero" @onclick='() => ScrollTo("hero")'>
+        PS<span class="nav-brand-dot">.</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+        <li><a href="#about" @onclick='() => ScrollTo("about")'>About</a></li>
+        <li><a href="#techstack" @onclick='() => ScrollTo("techstack")'>Tech Stack</a></li>
+        <li><a href="#projects" @onclick='() => ScrollTo("projects")'>Projects</a></li>
+        <li><a href="#experience" @onclick='() => ScrollTo("experience")'>Experience</a></li>
+        <li><a href="#contact" @onclick='() => ScrollTo("contact")' class="nav-cta">Contact</a></li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-hamburger" @onclick="ToggleMenu" aria-label="Toggle navigation">
+        <span class="@(menuOpen ? "bar bar-open-1" : "bar")"></span>
+        <span class="@(menuOpen ? "bar bar-open-2" : "bar")"></span>
+        <span class="@(menuOpen ? "bar bar-open-3" : "bar")"></span>
+    </button>
+</nav>
+
+<!-- Mobile dropdown -->
+@if (menuOpen)
+{
+    <div class="nav-mobile-menu">
+        <ul>
+            <li><a href="#about" @onclick='() => MobileScrollTo("about")'>About</a></li>
+            <li><a href="#techstack" @onclick='() => MobileScrollTo("techstack")'>Tech Stack</a></li>
+            <li><a href="#projects" @onclick='() => MobileScrollTo("projects")'>Projects</a></li>
+            <li><a href="#experience" @onclick='() => MobileScrollTo("experience")'>Experience</a></li>
+            <li><a href="#contact" @onclick='() => MobileScrollTo("contact")'>Contact</a></li>
+        </ul>
+    </div>
+}
 
 @code {
-    private bool collapseNavMenu = true;
+    private bool menuOpen = false;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private void ToggleMenu()
     {
-        collapseNavMenu = !collapseNavMenu;
+        menuOpen = !menuOpen;
     }
 
+    private async Task ScrollTo(string id)
+    {
+        await JS.InvokeVoidAsync("scrollToSection", id);
+    }
+
+    private async Task MobileScrollTo(string id)
+    {
+        menuOpen = false;
+        await JS.InvokeVoidAsync("scrollToSection", id);
+    }
 }

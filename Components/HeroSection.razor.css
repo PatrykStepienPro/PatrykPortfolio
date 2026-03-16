@@ -1,0 +1,71 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(88, 166, 255, 0.08) 0%, transparent 60%),
+                var(--color-bg-primary);
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-greeting {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.hero-name {
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+}
+
+.hero-title {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.hero-tagline {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-text-secondary);
+    animation: bounce 2s infinite;
+    opacity: 0.6;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+}

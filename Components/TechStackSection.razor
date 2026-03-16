@@ -1,0 +1,32 @@
+<section class="section" id="techstack">
+    <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="section-title-line"></div>
+
+        @foreach (var group in TechGroups)
+        {
+            <div class="tech-group">
+                <h3 class="tech-group-title">@group.Category</h3>
+                <div class="tech-badges">
+                    @foreach (var tech in group.Items)
+                    {
+                        <span class="tech-badge">@tech</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private record TechGroup(string Category, string[] Items);
+
+    private static readonly TechGroup[] TechGroups =
+    [
+        new("Languages", ["C#", "TypeScript", "SQL", "HTML", "CSS"]),
+        new("Frameworks & Libraries", ["Blazor WebAssembly", "ASP.NET Core", ".NET 8 / .NET 10", "Entity Framework Core", "SignalR"]),
+        new("Databases", ["PostgreSQL", "SQL Server", "SQLite", "Redis"]),
+        new("Tools & Platforms", ["Git", "GitHub Actions", "Docker", "Azure", "Rider / VS Code"]),
+        new("Architecture & Patterns", ["Clean Architecture", "CQRS", "REST", "Domain-Driven Design"]),
+    ];
+}

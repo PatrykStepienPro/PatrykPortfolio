@@ -1,0 +1,35 @@
+.contact-intro {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.contact-primary-btn {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+}

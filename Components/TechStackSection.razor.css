@@ -1,0 +1,18 @@
+.tech-group {
+    margin-bottom: 2.5rem;
+}
+
+.tech-group-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
