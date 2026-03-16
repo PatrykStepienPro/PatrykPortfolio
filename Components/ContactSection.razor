@@ -1,21 +1,21 @@
+@inject LanguageService LangSvc
+@implements IDisposable
+
 <section class="section section-alt" id="contact">
     <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">@LangSvc.Get("contact.title")</h2>
         <div class="section-title-line"></div>
 
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
-                <p class="contact-intro">
-                    I'm currently open to new opportunities. Whether you have a project in mind,
-                    want to collaborate, or just want to say hi — my inbox is always open.
-                </p>
+                <p class="contact-intro">@LangSvc.Get("contact.intro")</p>
 
                 <a href="mailto:patryk@example.com" class="btn-accent contact-primary-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
                     </svg>
-                    Say Hello
+                    @LangSvc.Get("contact.btn")
                 </a>
 
                 <div class="contact-links">
@@ -36,3 +36,8 @@
         </div>
     </div>
 </section>
+
+@code {
+    protected override void OnInitialized() => LangSvc.OnChange += StateHasChanged;
+    public void Dispose() => LangSvc.OnChange -= StateHasChanged;
+}

@@ -1,12 +1,17 @@
 @page "/not-found"
+@inject LanguageService LangSvc
+@implements IDisposable
 
-<PageTitle>Not Found — Patryk Stępień</PageTitle>
+<PageTitle>404 — Patryk Stępień</PageTitle>
 
 <div class="container text-center" style="padding: 8rem 1rem;">
     <h1 style="font-size: 5rem; font-weight: 700; color: var(--color-accent);">404</h1>
-    <h2 style="color: var(--color-text-primary); margin-bottom: 1rem;">Page Not Found</h2>
-    <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
-        The page you're looking for doesn't exist.
-    </p>
-    <a href="/" class="btn-accent">Go Home</a>
+    <h2 style="color: var(--color-text-primary); margin-bottom: 1rem;">@LangSvc.Get("notfound.heading")</h2>
+    <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">@LangSvc.Get("notfound.desc")</p>
+    <a href="/" class="btn-accent">@LangSvc.Get("notfound.btn")</a>
 </div>
+
+@code {
+    protected override void OnInitialized() => LangSvc.OnChange += StateHasChanged;
+    public void Dispose() => LangSvc.OnChange -= StateHasChanged;
+}

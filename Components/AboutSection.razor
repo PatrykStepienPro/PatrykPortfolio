@@ -1,32 +1,29 @@
+@inject LanguageService LangSvc
+@implements IDisposable
+
 <section class="section section-alt" id="about">
     <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">@LangSvc.Get("about.title")</h2>
         <div class="section-title-line"></div>
 
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
                 <p class="about-bio">
-                    I'm a passionate .NET developer with a focus on building modern web applications
-                    using <strong>Blazor WebAssembly</strong> and the .NET ecosystem. I enjoy crafting
-                    clean, performant UIs that run directly in the browser — no JavaScript framework required.
+                    @LangSvc.Get("about.bio1.start")<strong>Blazor WebAssembly</strong>@LangSvc.Get("about.bio1.end")
                 </p>
-                <p class="about-bio">
-                    When I'm not writing C#, I explore system design, contribute to open-source projects,
-                    and stay on top of the latest developments in the .NET world. I believe in writing
-                    maintainable code and shipping products that users love.
-                </p>
+                <p class="about-bio">@LangSvc.Get("about.bio2")</p>
                 <div class="about-facts">
                     <div class="fact-item">
                         <span class="fact-icon">&#x1F4CD;</span>
-                        <span>Based in Poland</span>
+                        <span>@LangSvc.Get("about.fact.location")</span>
                     </div>
                     <div class="fact-item">
                         <span class="fact-icon">&#x1F4BB;</span>
-                        <span>Available for remote work</span>
+                        <span>@LangSvc.Get("about.fact.remote")</span>
                     </div>
                     <div class="fact-item">
                         <span class="fact-icon">&#x1F393;</span>
-                        <span>Computer Science background</span>
+                        <span>@LangSvc.Get("about.fact.edu")</span>
                     </div>
                 </div>
             </div>
@@ -37,10 +34,15 @@
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                             <circle cx="12" cy="7" r="4"/>
                         </svg>
-                        <p>Photo coming soon</p>
+                        <p>@LangSvc.Get("about.photo")</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+@code {
+    protected override void OnInitialized() => LangSvc.OnChange += StateHasChanged;
+    public void Dispose() => LangSvc.OnChange -= StateHasChanged;
+}

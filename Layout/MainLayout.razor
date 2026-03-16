@@ -1,17 +1,36 @@
 @inherits LayoutComponentBase
+@inject LanguageService LangSvc
+@implements IDisposable
 
-<header class="site-header">
-    <NavMenu />
-</header>
+@if (LangSvc.IsLoaded)
+{
+    <header class="site-header">
+        <NavMenu />
+    </header>
 
-<main>
-    @Body
-</main>
+    <main>
+        @Body
+    </main>
 
-<footer class="site-footer">
-    <div class="container text-center">
-        <p class="mb-0">
-            &copy; @DateTime.Now.Year Patryk Stępień &mdash; Built with Blazor WASM &amp; .NET
-        </p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p class="mb-0">
+                &copy; @DateTime.Now.Year Patryk Stępień &mdash; @LangSvc.Get("footer.text")
+            </p>
+        </div>
+    </footer>
+}
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            LangSvc.OnChange += StateHasChanged;
+            await LangSvc.InitAsync();
+            StateHasChanged();
+        }
+    }
+
+    public void Dispose() => LangSvc.OnChange -= StateHasChanged;
+}
