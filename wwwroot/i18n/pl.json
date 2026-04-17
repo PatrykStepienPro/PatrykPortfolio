@@ -35,6 +35,8 @@
   "projects.portfolio.desc": "To portfolio — aplikacja SPA Blazor WebAssembly hostowana na GitHub Pages. Ciemny motyw z płynną nawigacją scroll.",
   "projects.loyalty.name": "Loyalty Program Platform",
   "projects.loyalty.desc": "Full-stackowa platforma multi-tenant do zarządzania programami lojalnościowymi. Zbudowana w Blazor Server, ASP.NET Core i MS SQL Server — od API i projektowania baz danych po dashboardy w MudBlazor. Wdrożona dla wielu klientów.",
+  "projects.hydrogrow.name": "HydroGrow",
+  "projects.hydrogrow.desc": "Wieloplatformowa aplikacja mobilna do zarządzania roślinami hydroponicznymi. Umożliwia śledzenie roślin, logowanie pomiarów (pH, EC, TDS), planowanie zabiegów, powiadomienia push i eksport danych. Zbudowana w .NET MAUI z lokalną bazą SQLite.",
 
   "experience.title": "Doświadczenie",
   "experience.role1": "Programista C#",

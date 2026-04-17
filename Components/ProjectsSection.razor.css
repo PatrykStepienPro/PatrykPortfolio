@@ -1,13 +1,18 @@
 .project-card {
-    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    min-height: 280px;
+}
+
+.project-card--wide {
+    min-height: unset;
 }
 
 .project-card-body {
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex: 1;
 }
 
 .project-header {

@@ -35,6 +35,8 @@
   "projects.portfolio.desc": "This portfolio — a single-page Blazor WebAssembly app hosted on GitHub Pages. Dark-mode design with smooth scroll navigation.",
   "projects.loyalty.name": "Loyalty Program Platform",
   "projects.loyalty.desc": "Full-stack multi-tenant platform for managing loyalty programs. Built with Blazor Server, ASP.NET Core and MS SQL Server — covering everything from backend APIs and database design to MudBlazor dashboards. Deployed for multiple clients.",
+  "projects.hydrogrow.name": "HydroGrow",
+  "projects.hydrogrow.desc": "Cross-platform mobile app for managing hydroponic plants. Track plants, log measurements (pH, EC, TDS), schedule treatments, get push reminders, and export your data. Built with .NET MAUI and a local SQLite database.",
 
   "experience.title": "Experience",
   "experience.role1": "C# Developer",

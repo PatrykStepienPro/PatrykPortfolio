@@ -1,0 +1,123 @@
+.project-card-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.project-card-text-cell {
+    padding: 1.5rem;
+    vertical-align: top;
+    width: 100%;
+}
+
+.project-card-slider-cell {
+    padding: 1.5rem;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.screenshot-slider {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--color-bg-card);
+}
+
+@media (max-width: 767px) {
+    .project-card-table,
+    .project-card-table tbody,
+    .project-card-table tr {
+        display: block;
+    }
+
+    .project-card-text-cell,
+    .project-card-slider-cell {
+        display: block;
+        width: 100%;
+        padding: 1.5rem;
+        white-space: normal;
+    }
+
+    .project-card-text-cell {
+        padding-bottom: 0;
+    }
+
+    .screenshot-slider {
+        width: 100%;
+        aspect-ratio: unset;
+        height: auto;
+        max-height: unset;
+        margin: 0 auto;
+    }
+
+    .screenshot-img {
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: unset;
+    }
+}
+
+.screenshot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-btn-prev { left: 0.5rem; }
+.slider-btn-next { right: 0.5rem; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+    z-index: 2;
+}
+
+.slider-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.slider-dot.active {
+    background: #fff;
+}
+
+.pa-rem15{
+    padding: 1.5rem;
+}
