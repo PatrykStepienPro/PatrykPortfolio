@@ -55,7 +55,7 @@
 </section>
 
 @code {
-    public record ProjectItem(string Name, string Description, string[] Tags, string GitHubUrl = "", string LiveUrl = "", string[] Screenshots = null!)
+    public record ProjectItem(string Name, string Description, string[] Tags, string GitHubUrl = "", string LiveUrl = "", string[] Screenshots = null!, bool IsLandscape = false)
     {
         public string[] Screenshots { get; init; } = Screenshots ?? [];
     }
@@ -100,7 +100,8 @@
                 "images/projects/taskManagementSystem/3.png",
                 "images/projects/taskManagementSystem/4.png",
                 "images/projects/taskManagementSystem/5.png",
-            ]
+            ],
+            IsLandscape: true
         ),
     ];
 }

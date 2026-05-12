@@ -118,6 +118,28 @@
     background: #fff;
 }
 
-.pa-rem15{
+.pa-rem15 {
     padding: 1.5rem;
+}
+
+.project-card--landscape .project-card-table,
+.project-card--landscape .project-card-table tbody,
+.project-card--landscape .project-card-table tr {
+    display: block;
+}
+
+.project-card--landscape .project-card-text-cell,
+.project-card--landscape .project-card-slider-cell {
+    display: block;
+    width: 100%;
+    white-space: normal;
+}
+
+.project-card--landscape .project-card-text-cell {
+    padding-bottom: 0;
+}
+
+.screenshot-slider--landscape {
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }

@@ -1,13 +1,13 @@
 @if (Project.Screenshots.Length > 0)
 {
-    <div class="card-dark project-card">
+    <div class="card-dark project-card @(Project.IsLandscape ? "project-card--landscape" : "")">
         <table class="project-card-table">
             <tr>
                 <td class="project-card-text-cell">
                     @CardBody
                 </td>
                 <td class="project-card-slider-cell">
-                    <div class="screenshot-slider">
+                    <div class="screenshot-slider @(Project.IsLandscape ? "screenshot-slider--landscape" : "")" >
                         <img src="@Project.Screenshots[_activeIndex]"
                              alt="@Project.Name screenshot @(_activeIndex + 1)"
                              class="screenshot-img" />
