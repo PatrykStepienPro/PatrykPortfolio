@@ -24,11 +24,13 @@
   "about.photo": "Photo coming soon",
 
   "techstack.title": "Tech Stack",
-  "techstack.cat.languages": "Languages",
-  "techstack.cat.frameworks": "Frameworks & Libraries",
+  "techstack.cat.backend": "Backend",
+  "techstack.cat.frontend": "Frontend",
   "techstack.cat.databases": "Databases",
-  "techstack.cat.tools": "Tools & Platforms",
+  "techstack.cat.authorization": "Authorization",
   "techstack.cat.architecture": "Architecture & Patterns",
+  "techstack.cat.tools": "Tools",
+  "techstack.cat.cloud": "Cloud",
 
   "projects.title": "Projects",
   "projects.portfolio.name": "Portfolio Site",

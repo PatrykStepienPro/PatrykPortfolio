@@ -29,10 +29,12 @@
 
     private TechGroup[] GetTechGroups() =>
     [
-        new(LangSvc.Get("techstack.cat.languages"),     ["C#", "SQL", "JavaScript", "HTML / CSS", "Python"]),
-        new(LangSvc.Get("techstack.cat.frameworks"),    ["Blazor Server", "Blazor WebAssembly", "ASP.NET Core", "MudBlazor", "Entity Framework Core", "Hangfire", "WinForms", "MAUI"]),
-        new(LangSvc.Get("techstack.cat.databases"),     ["MS SQL Server", "SQLite"]),
-        new(LangSvc.Get("techstack.cat.tools"),         ["Git", "GitLab CI/CD", "Rider", "Visual Studio", "Azure", "Postman"]),
-        new(LangSvc.Get("techstack.cat.architecture"),  ["REST API", "Minimal API", "Clean Architecture"]),
+        new(LangSvc.Get("techstack.cat.backend"),       ["C#", ".NET 6/8/10", "ASP.NET Core", "Minimal API", "REST API", "Entity Framework Core", "LINQ", "async/await"]),
+        new(LangSvc.Get("techstack.cat.frontend"),      ["Blazor Server", "Blazor WebAssembly", "Razor Components", "MudBlazor", "HTML", "CSS", "JavaScript"]),
+        new(LangSvc.Get("techstack.cat.databases"),     ["MS SQL Server", "T-SQL", "SQLite"]),
+        new(LangSvc.Get("techstack.cat.authorization"), ["JWT", "ASP.NET Identity", "OpenID Connect", "Microsoft Entra ID", "Microsoft Graph API"]),
+        new(LangSvc.Get("techstack.cat.architecture"),  ["Clean Architecture", "SOLID", "OOP"]),
+        new(LangSvc.Get("techstack.cat.tools"),         ["Git", "GitLab CI/CD", "Docker", "Postman", "Swagger/OpenAPI", "Visual Studio", "Rider"]),
+        new(LangSvc.Get("techstack.cat.cloud"),         ["Azure"]),
     ];
 }
