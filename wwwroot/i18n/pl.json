@@ -17,9 +17,9 @@
   "about.title": "O mnie",
   "about.bio1.start": "Jestem full-stack deweloperem .NET z Warszawy, z ponad 4,5-letnim doświadczeniem w ",
   "about.bio1.end": " i ekosystemie .NET sięgającym czasów studiów. Na co dzień buduję i utrzymuję aplikacje Blazor Server i WebAssembly, projektuję API REST w ASP.NET Core oraz zarządzam bazami danych — od UI do zapytania.",
-  "about.bio2": "Poza pracą regeneruję się w górach, trenuję BJJ, biegam i od czasu do czasu znikam na długiej jeździe rowerem. Startuję też w psich sportach razem z moim psem. Czytam książki popularnonaukowe i jestem otwarty na nowe możliwości — preferuję pracę zdalną, z możliwością jednego dnia w tygodniu w biurze w Warszawie.",
+  "about.bio2": "Poza pracą regeneruję się w górach, trenuję BJJ, biegam i od czasu do czasu znikam na długiej jeździe rowerem. Startuję też w psich sportach razem z moim psem. Czytam książki popularnonaukowe i jestem otwarty na nowe możliwości — preferuję pracę zdalną lub hybrydową.",
   "about.fact.location": "Warszawa",
-  "about.fact.remote": "Praca zdalna, max. 1 dzień w tygodniu stacjonarnie",
+  "about.fact.remote": "Praca zdalna lub hybrydowa",
   "about.fact.edu": "Wykształcenie informatyczne",
   "about.photo": "Zdjęcie wkrótce",
 
@@ -37,6 +37,8 @@
   "projects.loyalty.desc": "Full-stackowa platforma multi-tenant do zarządzania programami lojalnościowymi. Zbudowana w Blazor Server, ASP.NET Core i MS SQL Server — od API i projektowania baz danych po dashboardy w MudBlazor. Wdrożona dla wielu klientów.",
   "projects.hydrogrow.name": "HydroGrow",
   "projects.hydrogrow.desc": "Wieloplatformowa aplikacja mobilna do zarządzania roślinami hydroponicznymi. Umożliwia śledzenie roślin, logowanie pomiarów (pH, EC, TDS), planowanie zabiegów, powiadomienia push i eksport danych. Zbudowana w .NET MAUI z lokalną bazą SQLite.",
+  "projects.taskmanagement.name": "System Zarządzania Zadaniami",
+  "projects.taskmanagement.desc": "Full-stack aplikacja do zarządzania zadaniami — ASP.NET Core Web API i Blazor Server. Czysta architektura warstwowa z pełnym CRUD dla projektów i zadań, filtrowaniem po statusie i priorytecie, statystykami na dashboardzie oraz dokumentacją Swagger. Uruchamiana przez Docker Compose.",
 
   "experience.title": "Doświadczenie",
   "experience.role1": "Programista C#",
